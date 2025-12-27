@@ -51,3 +51,22 @@ print("单位矩阵",arr)
 # 对角矩阵：主对角线上非零的值，其余位置的值为零
 arr = np.diag([1,3,4,6])
 print("对数矩阵",arr)
+
+# 随机生成0到1 数组生成
+arr = np.random.rand(3,3 )
+print("随机数组",arr)
+
+# 随机生成指定范围区间的随机数
+arr = np.random.uniform(2,10,(3,3))
+print("随机数组",arr)
+
+# 随机生成正态分布
+arr = np.random.randn(4,4)
+print("正态分布")
+print(arr)
+
+# 设置随机种子
+np.random.seed(10)
+arr = np.random.randint(1,10,(3,3))
+print("设置随机种子")
+print(arr)
