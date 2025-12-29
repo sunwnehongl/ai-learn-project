@@ -1,9 +1,13 @@
 import numpy as np
 
-# 统计函数：求和、求平均值、加权平均、求中位数
+# 统计函数：求和、求平均值、加权平均、求中位数、方差、标准差、极差
 arr = np.random.randint(1,100,(3,3))
 print("矩阵",arr)
 print("求和：",np.sum(arr))
+print("最大值",np.max(arr))
+print("最大值索引",np.argmax(arr))
+print("最小值",np.min(arr))
+print("最小值索引",np.argmin(arr))
 # 平均值
 print("平均值：",np.mean(arr))
 print("按行求平均",np.mean(arr,axis=0))
@@ -39,6 +43,7 @@ print("平均值",np.median(arr))
 print("标准差",np.std(arr))
 print("总体方差",np.var(arr))
 print("总体标准差",np.std(arr))
+print("总体极差",np.ptp(arr))
 print("样本方差：",np.var(arr,ddof=4))
 print("样本标准差",np.std(arr,ddof=4))
 
@@ -46,6 +51,15 @@ arr= np.random.randint(1,10,(3,3))
 print("方差",arr)
 print("每列的方差",np.var(arr,axis=0))
 print("每列的标准差",np.std(arr,axis=0))
+print("每列的极差",np.ptp(arr,axis=0))
 print('每行的方差',np.var(arr,axis=1))
 print("每行的标准差",np.std(arr,axis=1))
-# 标准差：标准差是方差的平方根
+print("每行的极差",np.ptp(arr,axis=1))
+
+# 百分位：先排序，然后百分比/100 * n
+arr = np.random.randint(1,10,10)
+print("求百分位",arr)
+print("25百分位",np.percentile(arr,25))
+print("直方图",np.histogram(arr))
+print("累积和",np.cumsum(arr))
+print("累积积",np.cumprod(arr))
